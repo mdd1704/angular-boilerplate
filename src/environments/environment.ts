@@ -1,10 +1,28 @@
+import swal from 'sweetalert2';
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://localhost:8000/api',
+  mapKey: 'mapKey',
 };
+
+export const pusher = {
+  id: 'id',
+  key: 'key',
+  secret: 'secret',
+  cluster: 'ap1',
+  secure: 1,
+};
+
+export const toast = swal.mixin({
+  toast: true,
+  position: 'bottom-end',
+  showConfirmButton: false,
+  timer: 3000
+});
 
 /*
  * For easier debugging in development mode, you can import the following file
